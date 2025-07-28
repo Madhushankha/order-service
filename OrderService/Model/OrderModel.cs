@@ -1,4 +1,6 @@
-﻿namespace OrderService.Model
+﻿using Newtonsoft.Json;
+
+namespace OrderService.Model
 {
     public class OrderModel
     {
@@ -29,6 +31,7 @@
         public decimal UnitPrice { get; set; }
         public int Quantity { get; set; }
 
+        [JsonIgnore]
         public OrderModel Order { get; set; }
     }
 }
